@@ -1,22 +1,22 @@
 {
   "mappings": [
-    "/content/wknd-universal/language-masters/en:/",
-    "/content/wknd-universal/language-masters/en/:/en/",
-    "/content/wknd-universal/language-masters/fr/:/fr/",
-    "/content/wknd-universal/language-masters/fr:/fr",
-    "/content/wknd-universal/language-masters/es/:/es/",
-    "/content/wknd-universal/language-masters/es:/es",
-    "/content/wknd-universal/language-masters/ja/:/ja/",
-    "/content/wknd-universal/language-masters/ja:/ja",
-    "/content/wknd-universal/language-masters/de/:/de/",
-    "/content/wknd-universal/language-masters/de:/de",
-    "/content/wknd-universal/configuration:/.helix/config.json",
-    "/content/wknd-universal/metadata:/metadata.json",
-    "/content/wknd-universal/redirects:/redirects.json",
-    "/content/wknd-universal/placeholders:/placeholders.json"
+    "/content/engiexwalk/language-masters/en:/",
+    "/content/engiexwalk/language-masters/en/:/en/",
+    "/content/engiexwalk/language-masters/fr/:/fr/",
+    "/content/engiexwalk/language-masters/fr:/fr",
+    "/content/engiexwalk/language-masters/es/:/es/",
+    "/content/engiexwalk/language-masters/es:/es",
+    "/content/engiexwalk/language-masters/ja/:/ja/",
+    "/content/engiexwalk/language-masters/ja:/ja",
+    "/content/engiexwalk/language-masters/de/:/de/",
+    "/content/engiexwalk/language-masters/de:/de",
+    "/content/engiexwalk/configuration:/.helix/config.json",
+    "/content/engiexwalk/metadata:/metadata.json",
+    "/content/engiexwalk/redirects:/redirects.json",
+    "/content/engiexwalk/placeholders:/placeholders.json"
   ],
   "includes": [
-    "/content/wknd-universal/",
-    "/content/dam/wknd-universal/"
+    "/content/engiexwalk/",
+    "/content/dam/engiexwalk/"
   ]
 }
