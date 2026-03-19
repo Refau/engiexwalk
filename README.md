@@ -21,7 +21,7 @@
 
 ## Environments
 - Preview: http://main--engiexwalk--refau.aem.page/
-- Live: http://main--engiewalk--refau.aem.live/
+- Live: http://main--engiexwalk--refau.aem.live/
 
 ## Documentation
 [Ref Demo 2.0](https://adobe.com/go/refdemo) 
