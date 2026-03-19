@@ -69,13 +69,11 @@ export default async function decorate(block) {
         });
 
         if (!response.ok) {
-					console.error(`error making cf graphql request:${response.status}`, {
-	          error: error.message,
-	          stack: error.stack,
-	          contentPath,
-	          variationname,
-	          isAuthor
-        	});
+          console.error(`error making cf graphql request: ${response.status}`, {
+            contentPath,
+            variationname,
+            isAuthor
+          });
           block.innerHTML = '';
           return; // Exit early if response is not ok
         } 
@@ -84,13 +82,13 @@ export default async function decorate(block) {
         try {
           offer = await response.json();
         } catch (parseError) {
-					console.error('Error parsing offer JSON from response:', {
-	          error: error.message,
-	          stack: error.stack,
-	          contentPath,
-	          variationname,
-	          isAuthor
-        	});
+          console.error('Error parsing offer JSON from response:', {
+            error: parseError.message,
+            stack: parseError.stack,
+            contentPath,
+            variationname,
+            isAuthor
+          });
           block.innerHTML = '';
           return;
         }
