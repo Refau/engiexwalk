@@ -1,12 +1,10 @@
 footer {
-  background-color: var(--dark-color);
+  background-color: var(--footer-background-color);
   font-size: var(--body-font-size-xs);
-  font-family: var(--light-font-family);
-  background-color: var(--dark-color-opacity);
-  background-color: #000;
+  font-family: var(--body-font-family);
   width: 100%;
   z-index: 2;
-  color: #ffffff;
+  color: var(--footer-text-color);
 }
 
 footer .footer > div {
@@ -26,12 +24,13 @@ footer .footer img {
 }
 
 footer .footer a {
-  color: #ffffff;
+  color: var(--footer-text-color);
   text-decoration: none;
 }
 
 footer .footer a:hover {
-  color: var(--main-accent-color);
+  color: var(--engie-blue-300);
+  text-decoration: underline;
 }
 
 @media (width >= 900px) {

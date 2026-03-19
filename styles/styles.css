@@ -22,33 +22,45 @@
 */
 
 :root {
-  /* colors */
+  /* colors — Engie brand */
   --background-color: var(--brand-background-color, #ffffff);
-  --dark-color: var(--brand-dark-color, #131313);
-  --light-color: var(--brand-light-color, #dcdcdc);
-  --text-color: var(--brand-text-color, #131313);
+  --dark-color: var(--brand-dark-color, #17255f);
+  --light-color: var(--brand-light-color, #ebeef1);
+  --text-color: var(--brand-text-color, #232d35);
   --text-light: var(--brand-light-text-color, #ffffff);
-  --text-disabled:rgb(113, 113, 113);
-  --link-color: var(--brand-link-color, #131313);
-  --link-hover-color: var(--brand-link-hover-color, #F97316);
-  --main-accent-color: var(--brand-theme-color, #FB923C);
+  --text-disabled: #9eadb8;
+  --link-color: var(--brand-link-color, #007acd);
+  --link-hover-color: var(--brand-link-hover-color, #005aa0);
+  --main-accent-color: var(--brand-theme-color, #007acd);
 
+  /* Engie extended palette */
+  --engie-blue-100: #f6f8fd;
+  --engie-blue-200: #e7eefc;
+  --engie-blue-300: #c0d4f9;
+  --engie-blue-500: #3c8cde;
+  --engie-blue-600: #007acd;
+  --engie-blue-700: #005aa0;
+  --engie-blue-900: #0b2d4e;
+  --engie-navy: #17255f;
+  --engie-teal: #00817d;
+  --engie-green: #008836;
+  --engie-gradient: linear-gradient(to right, #d2f3ff, #d8f7f2);
 
-  --dark-color-opacity: rgba(0, 0, 0, 0.55);
+  --dark-color-opacity: rgba(23, 37, 95, 0.92);
   --light-color-opacity: rgba(255, 255, 255, 0.5);
-  --tab-background-color: rgba(0, 0, 0, 0.02);
+  --tab-background-color: rgba(0, 122, 205, 0.04);
   /* brand-scoped header/footer variables with sensible defaults */
-  --nav-background-color: var(--brand-nav-background-color, #0000008c);
+  --nav-background-color: var(--brand-nav-background-color, #17255f);
   --nav-text-color: var(--brand-nav-text-color, #ffffff);
-  --footer-background-color: var(--brand-footer-background-color, #000);
+  --footer-background-color: var(--brand-footer-background-color, #17255f);
   --footer-text-color: var(--brand-footer-text-color, #ffffff);
-  
-  /* fonts */
-  --body-font-family: 'Adobe Clean', roboto, roboto-fallback, sans-serif;
-  --heading-font-family: 'Adobe Clean Bold', roboto-condensed, roboto-condensed-fallback, sans-serif;
-  --light-font-family: 'Adobe Clean Light', roboto, roboto-fallback, sans-serif;
-  --extra-font-family: 'Adobe Clean Extra Bold', roboto, roboto-fallback, sans-serif;
-  --black-font-family: 'Adobe Clean Black', roboto, roboto-fallback, sans-serif;
+
+  /* fonts — Lato (Engie brand font) */
+  --body-font-family: 'Lato', lato-fallback, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --heading-font-family: 'Lato', lato-fallback, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --light-font-family: 'Lato', lato-fallback, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --extra-font-family: 'Lato', lato-fallback, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --black-font-family: 'Lato', lato-fallback, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -100,6 +112,13 @@
 }
 
 /* fallback fonts */
+@font-face {
+  font-family: lato-fallback;
+  size-adjust: 97.38%;
+  ascent-override: 101%;
+  src: local('Arial');
+}
+
 @font-face {
   font-family: roboto-condensed-fallback;
   size-adjust: 88.82%;
@@ -419,8 +438,9 @@ h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark-color);
   scroll-margin: 40px;
 }
 
@@ -667,6 +687,12 @@ main > .section:first-of-type {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.engie-gradient {
+  background-image: var(--engie-gradient);
   margin: 0;
   padding: 40px 0;
 }
@@ -942,13 +968,13 @@ table {
 /* Button styling within */
 .cta-button a.button {
   display: inline-block;
-  padding: 12px 24px !important;
+  padding: 12px 28px !important;
   margin: 10px 5px;
   background-color: var(--main-accent-color) !important;
   color: var(--text-light) !important;
   text-decoration: none;
   border: 2px solid var(--main-accent-color) !important;
-  border-radius: 4px;
+  border-radius: 30px;
   font-family: var(--heading-font-family);
   font-weight: 600;
   font-size: 18px;
@@ -994,10 +1020,10 @@ table {
 /* Secondary button variant */
 .cta-button-secondary a.button {
   display: inline-block;
-  padding: 12px 24px !important;
+  padding: 12px 28px !important;
   margin: 10px 5px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 30px;
   font-family: var(--heading-font-family);
   font-weight: 600;
   font-size: 18px;
@@ -1056,13 +1082,13 @@ table {
 /*dark mode*/
 .cta-button-dark a.button {
   display: inline-block;
-  padding: 12px 24px !important;
+  padding: 12px 28px !important;
   margin: 10px 5px;
   background-color: var(--text-light) !important;
   color: var(--dark-color) !important;
   text-decoration: none;
   border: 2px solid var(--dark-color) !important;
-  border-radius: 4px;
+  border-radius: 30px;
   font-family: var(--heading-font-family);
   font-weight: 600;
   font-size: 18px;
@@ -1105,8 +1131,3 @@ table {
   transform: translateX(0);
 }
 
-/* Accessibility: darken default accent and hover for better contrast */
-:root {
-  --main-accent-color: #C2410C; /* darker orange for contrast */
-  --link-hover-color: #9A3412;  /* darker hover */
-}
