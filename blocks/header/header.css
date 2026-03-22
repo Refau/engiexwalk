@@ -1,9 +1,10 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--dark-color-opacity);
+  background-color: #ffffff;
   width: 100%;
   z-index: 2;
-  position: fixed;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 header nav {
@@ -90,7 +91,7 @@ header nav .nav-hamburger button {
   border-radius: 0;
   padding: 0;
   background-color: transparent;
-  color: var(--text-light);
+  color: var(--nav-text-color);
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -299,7 +300,7 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
-    color: #ffffff;
+    color: var(--nav-text-color);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -470,7 +471,7 @@ header nav .nav-tools .lang-switcher { display: inline-flex; }
     padding: 8% 3%;
     text-align: center;
     z-index: 11111111;
-    background-color: var(--dark-color-opacity);
+    background-color: #ffffff;
   }
 
   header nav .nav-sections ul {
