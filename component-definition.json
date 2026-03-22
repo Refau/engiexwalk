@@ -171,6 +171,21 @@
           }
         },
         {
+          "title": "CF Promotion",
+          "id": "cf-promotion",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "CF Promotion",
+                  "model": "cf-promotion"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Columns",
           "id": "columns",
           "plugins": {
