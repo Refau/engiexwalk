@@ -317,7 +317,7 @@
   flex-basis: 0;
   align-items: center;
   position: absolute;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(23, 37, 95, 0.75);
   color: var(--text-light);
   display: block;
   align-content: center;
@@ -331,16 +331,22 @@
 .carousel li.teaser-overlay .cards-card-body a::after {
   color: var(--text-light);
 }
-.carousel > ul > li.teaser-overlay .cards-card-body h1 {
+.carousel > ul > li.teaser-overlay .cards-card-body h1,
+.carousel > ul > li.teaser-overlay .cards-card-body h2,
+.carousel > ul > li.teaser-overlay .cards-card-body h3,
+.carousel > ul > li.teaser-overlay .cards-card-body h4,
+.carousel > ul > li.teaser-overlay .cards-card-body h5,
+.carousel > ul > li.teaser-overlay .cards-card-body h6 {
   margin: 0;
   font-size: 22px;
   line-height: 32px;
-
+  color: var(--text-light);
 }
 .carousel > ul > li.teaser-overlay .cards-card-body p {
   margin: 10px 0;
   font-size: 16px;
   line-height: 24px;
+  color: var(--text-light);
 }
 .carousel > ul > li.teaser-overlay picture {
   width: 100%;
@@ -380,7 +386,7 @@
   flex-grow: 1;
   flex-basis: 0;
   position: absolute;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(23, 37, 95, 0.75);
   border-radius: 10px 0 0 0;
   color: var(--text-light);
   text-align: center;
@@ -399,15 +405,22 @@
 .carousel > ul > li.teaser-card .cards-card-body p.button-container a::after {
   color: var(--text-light);
 }*/
-.carousel > ul > li.teaser-card .cards-card-body h1 {
+.carousel > ul > li.teaser-card .cards-card-body h1,
+.carousel > ul > li.teaser-card .cards-card-body h2,
+.carousel > ul > li.teaser-card .cards-card-body h3,
+.carousel > ul > li.teaser-card .cards-card-body h4,
+.carousel > ul > li.teaser-card .cards-card-body h5,
+.carousel > ul > li.teaser-card .cards-card-body h6 {
   margin: 0;
   font-size: 22px;
   line-height: 32px;
+  color: var(--text-light);
 }
 .carousel > ul > li.teaser-card .cards-card-body p {
   margin: 10px 0;
   font-size: 16px;
   line-height: 24px;
+  color: var(--text-light);
 }
 .carousel > ul > li.teaser-card picture {
   width: 100%;

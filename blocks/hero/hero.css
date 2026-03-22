@@ -480,7 +480,7 @@ picture {
 
 .hero.block.overlay div:nth-child(2),.hero.image-background-text-left div:nth-child(2),.hero.image-background-text-right div:nth-child(2) {
   padding: 20px;
-  background: rgb(0 0 0 / 50%);
+  background: rgba(23, 37, 95, 0.75);
 }
 
 /*button theme hero specific*/
