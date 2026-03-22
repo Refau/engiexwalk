@@ -110,6 +110,11 @@ export default function decorate(block) {
     .find((el) => el.textContent.trim() === 'title');
   const rteElement = rteElementTag?.parentElement?.nextElementSibling;
   const rteContent = rteElement?.querySelector('p')?.innerHTML;
+
+  const descElementTag = Array.from(block.querySelectorAll('p'))
+    .find((el) => el.textContent.trim() === 'description');
+  const descElement = descElementTag?.parentElement?.nextElementSibling;
+  const descContent = descElement?.innerHTML;
   const sampleVideo = 'https://v.ftcdn.net/02/35/97/40/700_F_235974059_oVftmgBBJ32tgsDvxRdMdtpQDMfNFWEt_ST.mp4';
 
   const properties = readBlockConfig(block);
@@ -146,6 +151,7 @@ export default function decorate(block) {
       ),
       div({ class: 'teaser-title-wrapper' },
         h2({ class: 'teaser-title' }),
+        div({ class: 'teaser-description' }),
         div({ class: buttonContainerClass },
           a({ id: 'button', href: buttonLink, class: `button ${buttonStyle}` },
             span({ class: 'button-text' }, buttonText),
@@ -156,6 +162,7 @@ export default function decorate(block) {
   );
 
   teaser.querySelector('.teaser-title').innerHTML = properties.title ? rteContent : 'Title';
+  if (descContent) teaser.querySelector('.teaser-description').innerHTML = descContent;
   block.innerHTML = '';
   block.appendChild(teaser);
 
