@@ -70,6 +70,8 @@ html[dir="rtl"] .teaser-wrapper .video-container .video-pause .video-pause-btn{
     width: 100%;
     position: relative;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .teaser-wrapper .teaser-title-wrapper {
