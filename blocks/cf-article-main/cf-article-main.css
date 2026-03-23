@@ -102,6 +102,9 @@
   background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
   background-size: 600px 100%;
   animation: cf-am-shimmer 1.4s infinite linear;
+  overflow: hidden;
+  color: transparent;
+  user-select: none;
 }
 
 .cf-am-skeleton-line--short { width: 30%; }

@@ -97,10 +97,10 @@ export default async function decorate(block) {
     <div class="al-skeleton-card">
       <div class="al-skeleton-image"></div>
       <div class="al-skeleton-body">
-        <div class="al-skeleton-line al-skeleton-line--short"></div>
-        <div class="al-skeleton-line al-skeleton-line--title"></div>
-        <div class="al-skeleton-line al-skeleton-line--full"></div>
-        <div class="al-skeleton-line al-skeleton-line--medium"></div>
+        <div class="al-skeleton-line al-skeleton-line--short">CATÉGORIE · 12 mars 2026</div>
+        <div class="al-skeleton-line al-skeleton-line--title">Lorem ipsum dolor sit amet consectetur adipiscing elit</div>
+        <div class="al-skeleton-line al-skeleton-line--full">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.</div>
+        <div class="al-skeleton-line al-skeleton-line--medium">Quis nostrud exercitation ullamco laboris.</div>
       </div>
     </div>`;
   block.innerHTML = `<div class="al-grid">${skeletonCard.repeat(3)}</div>`;

@@ -46,7 +46,14 @@ export default async function decorate(block) {
     return;
   }
 
-  block.innerHTML = '<div class="cf-promo-skeleton"></div>';
+  block.innerHTML = `
+    <div class="cf-promo-skeleton">
+      <div class="cf-promo-skeleton-content">
+        <div class="cf-promo-skeleton-line cf-promo-skeleton-line--title">Lorem ipsum dolor sit amet consectetur</div>
+        <div class="cf-promo-skeleton-line cf-promo-skeleton-line--desc">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+        <div class="cf-promo-skeleton-line cf-promo-skeleton-line--cta">Découvrir</div>
+      </div>
+    </div>`;
   const isAuthor = isAuthorEnvironment();
 
 	// Prepare request configuration based on environment

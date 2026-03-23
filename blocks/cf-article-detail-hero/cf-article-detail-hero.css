@@ -166,6 +166,9 @@
   background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.14) 50%, rgba(255,255,255,0.06) 75%);
   background-size: 800px 100%;
   animation: cf-adh-shimmer 1.4s infinite linear;
+  overflow: hidden;
+  color: transparent;
+  user-select: none;
 }
 
 .cf-adh-skeleton-line--tag { bottom: 148px; left: 24px; width: 80px; height: 22px; border-radius: 50px; }

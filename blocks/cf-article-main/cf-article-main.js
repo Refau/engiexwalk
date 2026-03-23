@@ -28,13 +28,13 @@ export default async function decorate(block) {
 
   block.innerHTML = `
     <div class="cf-am-skeleton">
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--title"></div>
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--medium"></div>
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
-      <div class="cf-am-skeleton-line cf-am-skeleton-line--short"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--title">Lorem ipsum dolor sit amet consectetur</div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--medium">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--short">Nemo enim ipsam voluptatem.</div>
     </div>`;
   if (!contentPath) {
     block.innerHTML = '<div class="cf-block-empty">Configure your content for this block</div>';

@@ -45,9 +45,9 @@ export default async function decorate(block) {
 
   block.innerHTML = `
     <div class="cf-adh-skeleton">
-      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--tag"></div>
-      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--title"></div>
-      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--desc"></div>
+      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--tag">CATÉGORIE</div>
+      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--title">Lorem ipsum dolor sit amet consectetur adipiscing</div>
+      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--desc">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
     </div>`;
   if (!contentPath) {
     block.innerHTML = '<div class="cf-block-empty">Configure your content for this block</div>';
