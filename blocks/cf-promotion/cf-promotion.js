@@ -41,6 +41,11 @@ export default async function decorate(block) {
 	const alignment = block.querySelector(':scope div:nth-child(4) > div')?.textContent?.trim() || '';
   const ctaStyle = block.querySelector(':scope div:nth-child(5) > div')?.textContent?.trim() || 'button';
 
+  if (!contentPath) {
+    block.innerHTML = '<div class="cf-block-empty">Configure your content for this block</div>';
+    return;
+  }
+
   block.innerHTML = '<div class="cf-promo-skeleton"></div>';
   const isAuthor = isAuthorEnvironment();
 

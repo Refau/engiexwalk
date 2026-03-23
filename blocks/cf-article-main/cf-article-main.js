@@ -36,7 +36,10 @@ export default async function decorate(block) {
       <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
       <div class="cf-am-skeleton-line cf-am-skeleton-line--short"></div>
     </div>`;
-  if (!contentPath) return;
+  if (!contentPath) {
+    block.innerHTML = '<div class="cf-block-empty">Configure your content for this block</div>';
+    return;
+  }
 
   const isAuthor = isAuthorEnvironment();
   const requestConfig = isAuthor
