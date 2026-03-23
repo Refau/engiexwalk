@@ -52,11 +52,11 @@ export default async function decorate(block) {
       return;
     }
 
-    // eslint-disable-next-line no-console
-    console.log('[CF Article Main] article.main:', JSON.stringify(article.main));
-
     const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
-    const bodyHtml = article.main?.html || '';
+    const bodyHtml = article.main?.html
+      || (article.main?.plaintext
+        ? article.main.plaintext.split(/\n\n+/).map((p) => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')
+        : '');
     const authorName = article.author || '';
 
     block.setAttribute('data-aue-type', 'container');
