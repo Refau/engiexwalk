@@ -4,15 +4,20 @@ import { getHostname } from '../../scripts/utils.js';
 
 const GRAPHQL_QUERY = '/graphql/execute.json/ref-demo-eds/ArticleByPath';
 
+function formatDateFr(raw) {
+  if (!raw) return '';
+  const d = new Date(raw);
+  if (Number.isNaN(d.getTime())) return raw;
+  return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
 /**
- * CF Article Detail Hero — renders a full-width hero from an Article Content Fragment.
- * Fields used: image, title, description, tags, subTag, date.
- *
+ * CF Article Detail Hero
  * Block rows:
- *   1 – CF path  (link or plain text)
- *   2 – Variation (optional, defaults to "master")
- *
- * @param {Element} block
+ *   1 – CF path
+ *   2 – Variation (default: master)
+ *   3 – Back button label (default: "Toutes les actualités")
+ *   4 – Back button link (default: history.back())
  */
 export default async function decorate(block) {
   const hostnameFromPlaceholders = await getHostname();
@@ -27,8 +32,15 @@ export default async function decorate(block) {
   const variationname = block.querySelector(':scope div:nth-child(2) > div')
     ?.textContent?.trim()?.toLowerCase()?.replace(' ', '_') || 'master';
 
-  block.innerHTML = '';
+  const backLabel = block.querySelector(':scope div:nth-child(3) > div')
+    ?.textContent?.trim() || 'Toutes les actualités';
 
+  const backLinkCell = block.querySelector(':scope div:nth-child(4) > div');
+  const backHref = backLinkCell?.querySelector('a')?.getAttribute('href')
+    || backLinkCell?.textContent?.trim()
+    || 'javascript:history.back()';
+
+  block.innerHTML = '';
   if (!contentPath) return;
 
   const isAuthor = isAuthorEnvironment();
@@ -57,29 +69,27 @@ export default async function decorate(block) {
       return;
     }
 
-    const imgUrl = isAuthor
-      ? article.image?._authorUrl
-      : article.image?._publishUrl;
-
+    const imgUrl = isAuthor ? article.image?._authorUrl : article.image?._publishUrl;
     const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
 
-    // Build meta row: tags + date
-    const metaParts = [];
+    // Tags as pill badges
     const tags = Array.isArray(article.tags) ? article.tags : [];
-    if (tags.length) {
-      metaParts.push(tags.map((t) => `<span class="cf-adh-tag">${t}</span>`).join(''));
-    }
-    if (article.subTag) {
-      metaParts.push(`<span class="cf-adh-subtag">${article.subTag}</span>`);
-    }
-    if ((tags.length || article.subTag) && article.date) {
-      metaParts.push('<span class="cf-adh-dot" aria-hidden="true">·</span>');
-    }
-    if (article.date) {
-      metaParts.push(`<span class="cf-adh-date"
-        data-aue-prop="date" data-aue-type="text" data-aue-label="Date"
-      >${article.date}</span>`);
-    }
+    const tagBadges = [
+      ...tags.map((t) => `<span class="cf-adh-tag">${t.toUpperCase()}</span>`),
+      ...(article.subTag ? [`<span class="cf-adh-tag">${article.subTag.toUpperCase()}</span>`] : []),
+    ].join('');
+
+    // Date formatted in French
+    const formattedDate = formatDateFr(article.date);
+
+    const metaHtml = (tagBadges || formattedDate) ? `
+      <div class="cf-adh-meta">
+        ${tagBadges ? `<span class="cf-adh-tags">${tagBadges}</span>` : ''}
+        ${tagBadges && formattedDate ? '<span class="cf-adh-dot" aria-hidden="true">·</span>' : ''}
+        ${formattedDate ? `<span class="cf-adh-date"
+          data-aue-prop="date" data-aue-type="text" data-aue-label="Date"
+        >${formattedDate}</span>` : ''}
+      </div>` : '';
 
     block.setAttribute('data-aue-type', 'container');
     block.innerHTML = `
@@ -101,16 +111,17 @@ export default async function decorate(block) {
         <div class="cf-adh-overlay" aria-hidden="true"></div>
 
         <div class="cf-adh-content">
-          <a class="cf-adh-back" href="javascript:history.back()">
+          <a class="cf-adh-back" href="${backHref}"
+            data-aue-prop="backLabel" data-aue-type="text" data-aue-label="Bouton retour">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
               fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
               stroke-linejoin="round" aria-hidden="true">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
-            Toutes les actualités
+            ${backLabel}
           </a>
 
-          ${metaParts.length ? `<div class="cf-adh-meta">${metaParts.join('')}</div>` : ''}
+          ${metaHtml}
 
           <h1 class="cf-adh-title"
             data-aue-prop="title"

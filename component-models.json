@@ -354,6 +354,20 @@
         "value": "master",
         "valueType": "string",
         "description": "CF variation to display (default: master)"
+      },
+      {
+        "component": "text",
+        "name": "backLabel",
+        "label": "Bouton retour — Texte",
+        "value": "Toutes les actualités",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "backLink",
+        "label": "Bouton retour — Lien",
+        "valueType": "string",
+        "description": "Lien du bouton retour (laisser vide pour history.back())"
       }
     ]
   },
