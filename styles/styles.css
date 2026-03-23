@@ -855,7 +855,7 @@ main .section.bg-image > .default-content-wrapper {
 } */
 
 .adobe-ue-edit header, .adobe-ue-preview header {
-  background: #000;
+  background: #fff;
 }
 
 /* Section background image (data-image) */
