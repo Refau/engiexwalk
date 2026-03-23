@@ -59,6 +59,9 @@ export default async function decorate(block) {
         : '');
     const authorName = article.author || '';
 
+    // eslint-disable-next-line no-console
+    console.log('[CF Article Main] bodyHtml:', bodyHtml, '| block:', block.outerHTML);
+
     block.setAttribute('data-aue-type', 'container');
     block.innerHTML = `
       <div class="cf-am-inner"
