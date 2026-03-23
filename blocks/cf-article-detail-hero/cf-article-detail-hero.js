@@ -73,11 +73,12 @@ export default async function decorate(block) {
     const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
 
     // Tags as pill badges
+    const cleanTag = (t) => String(t).replace(/^[^:]+:/i, '').trim().toUpperCase();
     const tags = Array.isArray(article.tags) ? article.tags : [];
     const subTags = Array.isArray(article.subTag) ? article.subTag : (article.subTag ? [article.subTag] : []);
     const tagBadges = [
-      ...tags.map((t) => `<span class="cf-adh-tag">${String(t).toUpperCase()}</span>`),
-      ...subTags.map((t) => `<span class="cf-adh-tag">${String(t).toUpperCase()}</span>`),
+      ...tags.map((t) => `<span class="cf-adh-tag">${cleanTag(t)}</span>`),
+      ...subTags.map((t) => `<span class="cf-adh-tag">${cleanTag(t)}</span>`),
     ].join('');
 
     // Date formatted in French
