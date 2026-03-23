@@ -103,10 +103,7 @@ export default async function decorate(block) {
       </div>
     </div>`;
   block.innerHTML = `<div class="al-grid">${skeletonCard.repeat(3)}</div>`;
-  if (!folderPath) {
-    block.innerHTML = '<div class="cf-block-empty">Configure your content for this block</div>';
-    return;
-  }
+  if (!folderPath) return;
 
   const isAuthor = isAuthorEnvironment();
   const requestConfig = isAuthor
