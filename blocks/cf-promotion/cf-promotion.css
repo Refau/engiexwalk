@@ -8,7 +8,7 @@
 .cf-promo-skeleton {
   width: 100%;
   min-height: 400px;
-  background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
+  background: linear-gradient(90deg, #17255f 25%, #1e2e75 50%, #17255f 75%);
   background-size: 800px 100%;
   animation: cf-promo-shimmer 1.4s infinite linear;
   display: flex;
@@ -26,7 +26,7 @@
 
 .cf-promo-skeleton-line {
   border-radius: 4px;
-  background: linear-gradient(90deg, rgba(0,0,0,0.08) 25%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0.08) 75%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.08) 25%, rgba(255,255,255,0.16) 50%, rgba(255,255,255,0.08) 75%);
   background-size: 800px 100%;
   animation: cf-promo-shimmer 1.4s infinite linear;
   overflow: hidden;
@@ -89,6 +89,7 @@
   padding: 0;
   margin: 0;
   font-family: var(--heading-font-family);
+  color: #ffffff;
 }
 
 .cf-promotion-wrapper .cf-promotion .banner-content .banner-detail .cftitle {
@@ -96,9 +97,10 @@
   font-size: 30px;
   line-height: 50px;
   font-family: var(--black-font-family);
+  color: #ffffff;
 }
 .cf-promotion-wrapper .cf-promotion .banner-content .banner-detail .cftitle::after {
-  background-color: var(--main-accent-color);
+  background-color: #ffffff;
   content: "";
   display: block;
   height: 5px;
