@@ -74,9 +74,10 @@ export default async function decorate(block) {
 
     // Tags as pill badges
     const tags = Array.isArray(article.tags) ? article.tags : [];
+    const subTags = Array.isArray(article.subTag) ? article.subTag : (article.subTag ? [article.subTag] : []);
     const tagBadges = [
-      ...tags.map((t) => `<span class="cf-adh-tag">${t.toUpperCase()}</span>`),
-      ...(article.subTag ? [`<span class="cf-adh-tag">${article.subTag.toUpperCase()}</span>`] : []),
+      ...tags.map((t) => `<span class="cf-adh-tag">${String(t).toUpperCase()}</span>`),
+      ...subTags.map((t) => `<span class="cf-adh-tag">${String(t).toUpperCase()}</span>`),
     ].join('');
 
     // Date formatted in French
