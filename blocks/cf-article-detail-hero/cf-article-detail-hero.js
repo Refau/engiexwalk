@@ -3,6 +3,7 @@ import { isAuthorEnvironment } from '../../scripts/scripts.js';
 import { getHostname } from '../../scripts/utils.js';
 
 const GRAPHQL_QUERY = '/graphql/execute.json/ref-demo-eds/ArticleByPath';
+const WRAPPER_SERVICE_URL = 'https://3635370-refdemoapigateway-stage.adobeioruntime.net/api/v1/web/ref-demo-api-gateway/fetch-cf';
 
 function formatDateFr(raw) {
   if (!raw) return '';
@@ -46,12 +47,29 @@ export default async function decorate(block) {
   if (!contentPath) return;
 
   const isAuthor = isAuthorEnvironment();
-  const url = isAuthor
-    ? `${aemauthorurl}${GRAPHQL_QUERY};path=${contentPath};variation=${variationname};ts=${Date.now()}`
-    : `${aempublishurl}${GRAPHQL_QUERY};path=${contentPath};variation=${variationname}`;
+  const requestConfig = isAuthor
+    ? {
+        url: `${aemauthorurl}${GRAPHQL_QUERY};path=${contentPath};variation=${variationname};ts=${Date.now()}`,
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+      }
+    : {
+        url: WRAPPER_SERVICE_URL,
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          graphQLPath: `${aempublishurl}${GRAPHQL_QUERY}`,
+          cfPath: contentPath,
+          variation: variationname,
+        }),
+      };
 
   try {
-    const response = await fetch(url, { headers: { 'Content-Type': 'application/json' } });
+    const response = await fetch(requestConfig.url, {
+      method: requestConfig.method,
+      headers: requestConfig.headers,
+      ...(requestConfig.body && { body: requestConfig.body }),
+    });
     if (!response.ok) {
       console.error(`CF Article Detail Hero: fetch failed (${response.status})`);
       return;
