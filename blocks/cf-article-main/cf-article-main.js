@@ -14,7 +14,9 @@ export default async function decorate(block) {
   const hostnameFromPlaceholders = await getHostname();
   const hostname = hostnameFromPlaceholders || getMetadata('hostname');
   const aemauthorurl = getMetadata('authorurl') || '';
-  const aempublishurl = hostname?.replace('author', 'publish')?.replace(/\/$/, '');
+  const aempublishurl = aemauthorurl
+    ? aemauthorurl.replace('author', 'publish').replace(/\/$/, '')
+    : hostname?.replace('author', 'publish')?.replace(/\/$/, '');
 
   const pathCell = block.querySelector(':scope div:nth-child(1) > div');
   const contentPath = pathCell?.querySelector('a')?.textContent?.trim()

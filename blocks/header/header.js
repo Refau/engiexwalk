@@ -353,7 +353,9 @@ async function applyCFTheme(themeCFReference) {
     const hostnameFromPlaceholders = await getHostname();
     const hostname = hostnameFromPlaceholders ? hostnameFromPlaceholders : getMetadata('hostname');
     const aemauthorurl = getMetadata('authorurl') || '';
-    const aempublishurl = hostname?.replace('author', 'publish')?.replace(/\/$/, '');
+    const aempublishurl = aemauthorurl
+    ? aemauthorurl.replace('author', 'publish').replace(/\/$/, '')
+    : hostname?.replace('author', 'publish')?.replace(/\/$/, '');
     const isAuthor = isAuthorEnvironment();
 
     // Prepare request configuration based on environment

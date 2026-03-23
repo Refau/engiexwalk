@@ -19,7 +19,9 @@ export default async function decorate(block) {
 	const hostname = hostnameFromPlaceholders ? hostnameFromPlaceholders : getMetadata('hostname');
   const aemauthorurl = getMetadata('authorurl') || '';
 	
-  const aempublishurl = hostname?.replace('author', 'publish')?.replace(/\/$/, '');  
+  const aempublishurl = aemauthorurl
+    ? aemauthorurl.replace('author', 'publish').replace(/\/$/, '')
+    : hostname?.replace('author', 'publish')?.replace(/\/$/, '');  
 	
 	//const aempublishurl = getMetadata('publishurl') || '';
 	
