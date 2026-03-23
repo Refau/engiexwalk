@@ -42,8 +42,7 @@ function buildArticleCard(article, baseUrl, isAuthor) {
   const metaHtml = (tagsHtml || dateHtml) ? `
     <div class="al-card-meta">
       ${tagsHtml}
-      ${tagsHtml && dateHtml ? '<span class="al-card-dot" aria-hidden="true">·</span>' : ''}
-      ${dateHtml}
+      ${dateHtml ? `<div class="al-card-date-row">${dateHtml}</div>` : ''}
     </div>` : '';
 
   return `
