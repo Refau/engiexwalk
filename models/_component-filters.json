@@ -9,6 +9,7 @@
     "id": "section",
     "components": [
       "accordion",
+      "article-list",
       "action-button",
       "button",
       "button",

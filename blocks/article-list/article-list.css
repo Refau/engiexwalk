@@ -1,0 +1,180 @@
+/* ── Grid ── */
+.al-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* ── Card ── */
+.al-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.al-card:hover {
+  box-shadow: 0 6px 24px rgba(23, 37, 95, 0.14);
+  transform: translateY(-3px);
+}
+
+/* ── Card link ── */
+.al-card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.al-card-link::after {
+  content: none !important;
+}
+
+/* ── Image ── */
+.al-card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--dark-color, #17255f);
+  flex-shrink: 0;
+}
+
+.al-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.al-card:hover .al-card-image {
+  transform: scale(1.04);
+}
+
+.al-card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--dark-color, #17255f) 0%, #2a3f8f 100%);
+}
+
+/* ── Body ── */
+.al-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 22px 24px;
+  gap: 10px;
+}
+
+/* ── Meta ── */
+.al-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.al-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.al-card-tag {
+  display: inline-block;
+  background: var(--engie-blue-600, #007acd);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 50px;
+  line-height: 1.4;
+}
+
+.al-card-dot {
+  color: var(--text-color-secondary, #999);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.al-card-date {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color-secondary, #777);
+}
+
+/* ── Title ── */
+.al-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark-color, #17255f);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Description ── */
+.al-card-description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-color-secondary, #555);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* ── CTA ── */
+.al-card-cta {
+  margin-top: auto;
+  padding-top: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--engie-blue-600, #007acd);
+  text-decoration: none;
+}
+
+.al-card-cta::after {
+  content: '→';
+  transition: transform 0.2s ease;
+}
+
+.al-card:hover .al-card-cta::after {
+  transform: translateX(4px);
+}
+
+/* ── Responsive ── */
+@media (width < 900px) {
+  .al-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 32px 20px;
+  }
+}
+
+@media (width < 600px) {
+  .al-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 16px;
+  }
+}

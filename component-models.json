@@ -286,6 +286,34 @@
     ]
   },
   {
+    "id": "article-list",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "folderPath",
+        "label": "Dossier des articles (chemin CF)",
+        "valueType": "string",
+        "required": true,
+        "description": "Chemin du dossier contenant les articles (ex: /content/dam/ref-demo-eds/articles)"
+      },
+      {
+        "component": "aem-content",
+        "name": "baseUrl",
+        "label": "URL de base des pages articles",
+        "valueType": "string",
+        "description": "Préfixe URL des pages de détail (ex: /fr/actualites)"
+      },
+      {
+        "component": "text",
+        "name": "limit",
+        "label": "Nombre d'articles",
+        "value": "9",
+        "valueType": "number",
+        "description": "Nombre maximum d'articles à afficher (défaut: 9)"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
