@@ -20,8 +20,9 @@
       "cf-promotion",
       "columns",
       "contentfragment",
-      "dm-asset",
       "dm-template",
+      "dynamic-media-image",
+      "dynamic-media-video",
       "embed-adaptive-form",
       "find-a-doctor",
       "forex",
@@ -40,6 +41,12 @@
     ]
   },
   {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -55,8 +62,9 @@
     "id": "column",
     "components": [
       "button",
-      "dm-asset",
       "dm-template",
+      "dynamic-media-image",
+      "dynamic-media-video",
       "image",
       "text",
       "title",
