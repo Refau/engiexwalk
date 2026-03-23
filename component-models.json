@@ -372,6 +372,27 @@
     ]
   },
   {
+    "id": "cf-article-main",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "reference",
+        "label": "Article Content Fragment",
+        "valueType": "string",
+        "required": true,
+        "variationName": "contentFragmentVariation"
+      },
+      {
+        "component": "text",
+        "name": "contentFragmentVariation",
+        "label": "Variation",
+        "value": "master",
+        "valueType": "string",
+        "description": "CF variation to display (default: master)"
+      }
+    ]
+  },
+  {
     "id": "cf-promotion",
     "fields": [
       {

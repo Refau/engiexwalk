@@ -1,0 +1,90 @@
+/* ── Container ── */
+.cf-article-main-container .cf-article-main-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+/* ── Inner ── */
+.cf-am-inner {
+  width: 100%;
+}
+
+/* ── Content ── */
+.cf-am-content {
+  margin: 0 auto;
+  max-width: 780px;
+  padding: 40px 24px 64px;
+  box-sizing: border-box;
+}
+
+/* ── Author ── */
+.cf-am-author {
+  margin: 0 0 32px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color-secondary, #555);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Body richtext ── */
+.cf-am-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-color, #333);
+}
+
+.cf-am-body h2,
+.cf-am-body h3,
+.cf-am-body h4 {
+  margin: 2em 0 0.6em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--heading-color, var(--dark-color, #17255f));
+}
+
+.cf-am-body h2 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+.cf-am-body h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); }
+.cf-am-body h4 { font-size: 1.1rem; }
+
+.cf-am-body p {
+  margin: 0 0 1.4em;
+}
+
+.cf-am-body ul,
+.cf-am-body ol {
+  margin: 0 0 1.4em;
+  padding-left: 1.5em;
+}
+
+.cf-am-body li {
+  margin-bottom: 0.4em;
+}
+
+.cf-am-body a {
+  color: var(--link-color, #0068c8);
+  text-decoration: underline;
+}
+
+.cf-am-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1.5em 0;
+}
+
+.cf-am-body blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  border-left: 4px solid var(--dark-color, #17255f);
+  background: var(--light-color, #f8f8f8);
+  font-style: italic;
+  color: var(--text-color-secondary, #555);
+}
+
+/* ── Responsive ── */
+@media (width < 768px) {
+  .cf-am-content {
+    padding: 28px 16px 48px;
+  }
+}
