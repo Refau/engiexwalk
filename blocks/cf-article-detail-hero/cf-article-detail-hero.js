@@ -43,7 +43,12 @@ export default async function decorate(block) {
     || backLinkCell?.textContent?.trim()
     || 'javascript:history.back()';
 
-  block.innerHTML = '';
+  block.innerHTML = `
+    <div class="cf-adh-skeleton">
+      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--tag"></div>
+      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--title"></div>
+      <div class="cf-adh-skeleton-line cf-adh-skeleton-line--desc"></div>
+    </div>`;
   if (!contentPath) return;
 
   const isAuthor = isAuthorEnvironment();

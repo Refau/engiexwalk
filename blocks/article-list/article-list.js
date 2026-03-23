@@ -93,7 +93,17 @@ export default async function decorate(block) {
   const limitRaw = block.querySelector(':scope div:nth-child(3) > div')?.textContent?.trim();
   const limit = limitRaw ? parseInt(limitRaw, 10) : 9;
 
-  block.innerHTML = '';
+  const skeletonCard = `
+    <div class="al-skeleton-card">
+      <div class="al-skeleton-image"></div>
+      <div class="al-skeleton-body">
+        <div class="al-skeleton-line al-skeleton-line--short"></div>
+        <div class="al-skeleton-line al-skeleton-line--title"></div>
+        <div class="al-skeleton-line al-skeleton-line--full"></div>
+        <div class="al-skeleton-line al-skeleton-line--medium"></div>
+      </div>
+    </div>`;
+  block.innerHTML = `<div class="al-grid">${skeletonCard.repeat(3)}</div>`;
   if (!folderPath) return;
 
   const isAuthor = isAuthorEnvironment();

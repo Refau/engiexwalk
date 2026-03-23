@@ -162,6 +162,47 @@
   transform: translateX(4px);
 }
 
+/* ── Skeleton ── */
+@keyframes al-shimmer {
+  0% { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+.al-skeleton-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.al-skeleton-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
+  background-size: 600px 100%;
+  animation: al-shimmer 1.4s infinite linear;
+}
+
+.al-skeleton-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.al-skeleton-line {
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e8e8e8 25%, #f5f5f5 50%, #e8e8e8 75%);
+  background-size: 600px 100%;
+  animation: al-shimmer 1.4s infinite linear;
+}
+
+.al-skeleton-line--short { width: 35%; }
+.al-skeleton-line--medium { width: 65%; }
+.al-skeleton-line--full { width: 100%; }
+.al-skeleton-line--title { height: 20px; width: 85%; }
+
 /* ── Responsive ── */
 @media (width < 900px) {
   .al-grid {

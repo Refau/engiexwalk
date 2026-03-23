@@ -26,7 +26,16 @@ export default async function decorate(block) {
   const variationname = block.querySelector(':scope div:nth-child(2) > div')
     ?.textContent?.trim()?.toLowerCase()?.replace(' ', '_') || 'master';
 
-  block.innerHTML = '';
+  block.innerHTML = `
+    <div class="cf-am-skeleton">
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--title"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--medium"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--full"></div>
+      <div class="cf-am-skeleton-line cf-am-skeleton-line--short"></div>
+    </div>`;
   if (!contentPath) return;
 
   const isAuthor = isAuthorEnvironment();

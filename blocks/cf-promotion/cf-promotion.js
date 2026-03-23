@@ -41,7 +41,7 @@ export default async function decorate(block) {
 	const alignment = block.querySelector(':scope div:nth-child(4) > div')?.textContent?.trim() || '';
   const ctaStyle = block.querySelector(':scope div:nth-child(5) > div')?.textContent?.trim() || 'button';
 
-  block.innerHTML = '';
+  block.innerHTML = '<div class="cf-promo-skeleton"></div>';
   const isAuthor = isAuthorEnvironment();
 
 	// Prepare request configuration based on environment

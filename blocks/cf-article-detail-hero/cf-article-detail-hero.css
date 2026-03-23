@@ -147,6 +147,31 @@
   max-width: 640px;
 }
 
+/* ── Skeleton ── */
+@keyframes cf-adh-shimmer {
+  0% { background-position: -800px 0; }
+  100% { background-position: 800px 0; }
+}
+
+.cf-adh-skeleton {
+  position: relative;
+  height: clamp(320px, 50vw, 540px);
+  overflow: hidden;
+  background: #17255f;
+}
+
+.cf-adh-skeleton-line {
+  border-radius: 4px;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.14) 50%, rgba(255,255,255,0.06) 75%);
+  background-size: 800px 100%;
+  animation: cf-adh-shimmer 1.4s infinite linear;
+}
+
+.cf-adh-skeleton-line--tag { bottom: 148px; left: 24px; width: 80px; height: 22px; border-radius: 50px; }
+.cf-adh-skeleton-line--title { bottom: 88px; left: 24px; width: clamp(260px, 55%, 620px); height: 32px; }
+.cf-adh-skeleton-line--desc { bottom: 44px; left: 24px; width: clamp(180px, 38%, 420px); height: 16px; }
+
 /* ── Responsive ── */
 @media (width < 768px) {
   .cf-adh-content {
