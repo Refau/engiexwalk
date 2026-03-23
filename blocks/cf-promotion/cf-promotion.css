@@ -190,7 +190,7 @@
   align-items: flex-start;
   text-align: left;
   padding: 60px;
-  background: var(--light-color);
+  background: #17255f;
   position: relative;
   z-index: 2;
   margin-left: 50%;
@@ -229,7 +229,7 @@
   align-items: flex-start;
   text-align: left;
   padding: 60px;
-  background: var(--light-color);
+  background: #17255f;
   position: relative;
   z-index: 2;
   margin-right: 50%;
@@ -255,7 +255,7 @@
   align-items: center;
   text-align: center;
   padding: 60px;
-  background: var(--light-color);
+  background: #17255f;
   position: relative;
   z-index: 2;
   margin-top: 50%;
@@ -281,7 +281,7 @@
   align-items: center;
   text-align: center;
   padding: 60px;
-  background: var(--light-color);
+  background: #17255f;
   position: relative;
   z-index: 2;
   margin-bottom: 50%;
