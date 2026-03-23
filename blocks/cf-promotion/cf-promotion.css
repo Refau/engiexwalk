@@ -292,21 +292,21 @@
 .cf-promotion-wrapper .cf-promotion .banner-content.image-right .banner-detail .cftitle,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-top .banner-detail .cftitle,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-bottom .banner-detail .cftitle {
-  color: var(--text-color);
+  color: #ffffff;
 }
 
 .cf-promotion-wrapper .cf-promotion .banner-content.image-left .banner-detail .cfsubtitle,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-right .banner-detail .cfsubtitle,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-top .banner-detail .cfsubtitle,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-bottom .banner-detail .cfsubtitle {
-  color: #666;
+  color: #ffffff;
 }
 
 .cf-promotion-wrapper .cf-promotion .banner-content.image-left .banner-detail .cfdescription,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-right .banner-detail .cfdescription,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-top .banner-detail .cfdescription,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-bottom .banner-detail .cfdescription {
-  color: var(--text-color);
+  color: #ffffff;
   width: 100%;
   /* text-align: left; */
 }
@@ -315,16 +315,16 @@
 .cf-promotion-wrapper .cf-promotion .banner-content.image-right .banner-detail a,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-top .banner-detail a,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-bottom .banner-detail a {
-  /* text-align: left; */ 
+  /* text-align: left; */
   /* align-self: flex-start; */
-  color: var(--text-color);
+  color: #ffffff;
 }
 
 .cf-promotion-wrapper .cf-promotion .banner-content.image-left .banner-detail a::after,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-right .banner-detail a::after,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-top .banner-detail a::after,
 .cf-promotion-wrapper .cf-promotion .banner-content.image-bottom .banner-detail a::after {
-  color: var(--text-color);
+  color: #ffffff;
 }
 
 /* Override text alignment for top/bottom layouts */
