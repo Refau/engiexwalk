@@ -52,6 +52,9 @@ export default async function decorate(block) {
       return;
     }
 
+    // eslint-disable-next-line no-console
+    console.log('[CF Article Main] article.main:', JSON.stringify(article.main));
+
     const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
     const bodyHtml = article.main?.html || '';
     const authorName = article.author || '';
