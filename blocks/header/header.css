@@ -7,6 +7,11 @@ header .nav-wrapper {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+.adobe-ue-edit header .nav-wrapper,
+.adobe-ue-preview header .nav-wrapper {
+  background-color: #ffffff;
+}
+
 header nav {
   box-sizing: border-box;
   display: grid;
