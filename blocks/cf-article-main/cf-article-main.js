@@ -23,6 +23,9 @@ export default async function decorate(block) {
   const variationname = block.querySelector(':scope div:nth-child(2) > div')
     ?.textContent?.trim()?.toLowerCase()?.replace(' ', '_') || 'master';
 
+  // eslint-disable-next-line no-console
+  console.log('[CF Article Main] contentPath:', contentPath, '| hostname:', hostname, '| aemauthorurl:', aemauthorurl);
+
   block.innerHTML = '';
   if (!contentPath) return;
 
@@ -30,6 +33,9 @@ export default async function decorate(block) {
   const url = isAuthor
     ? `${aemauthorurl}${GRAPHQL_QUERY};path=${contentPath};variation=${variationname};ts=${Date.now()}`
     : `${aempublishurl}${GRAPHQL_QUERY};path=${contentPath};variation=${variationname}`;
+
+  // eslint-disable-next-line no-console
+  console.log('[CF Article Main] fetching:', url);
 
   try {
     const response = await fetch(url, { headers: { 'Content-Type': 'application/json' } });
