@@ -12,7 +12,6 @@
       "article-list",
       "action-button",
       "button",
-      "button",
       "cards",
       "carousel",
       "cf-article-detail-hero",
@@ -53,6 +52,12 @@
     ]
   },
   {
+    "id": "carousel",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
@@ -62,13 +67,47 @@
     "id": "column",
     "components": [
       "button",
-      "dm-template",
-      "dynamic-media-image",
-      "dynamic-media-video",
       "image",
       "text",
       "title",
-      "video"
+      "video",
+      "dynamic-media-video"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
+    ]
+  },
+  {
+    "id": "form",
+    "components": [
+      "captcha",
+      "checkbox",
+      "checkbox-group",
+      "date-input",
+      "drop-down",
+      "email",
+      "file-input",
+      "form-accordion",
+      "form-button",
+      "form-fragment",
+      "form-image",
+      "form-modal",
+      "form-reset-button",
+      "form-submit-button",
+      "number-input",
+      "panel",
+      "password",
+      "plain-text",
+      "radio-group",
+      "rating",
+      "telephone-input",
+      "text-input",
+      "tnc",
+      "wizard",
+      "range"
     ]
   }
 ]
