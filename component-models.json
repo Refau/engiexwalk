@@ -5822,12 +5822,6 @@
         ]
       },
       {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
-        "valueType": "string"
-      },
-      {
         "component": "select",
         "name": "boxPosition",
         "label": "Box Position",
