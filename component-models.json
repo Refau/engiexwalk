@@ -5785,7 +5785,6 @@
             "component": "text",
             "valueType": "string",
             "name": "buttonText",
-            "value": "Button",
             "label": "Button Text"
           },
           {
@@ -5801,7 +5800,6 @@
             "name": "ctastyle",
             "label": "CTA Style",
             "valueType": "string",
-            "value": "button",
             "options": [
               {
                 "name": "Default Button",
@@ -5834,7 +5832,6 @@
         "name": "boxPosition",
         "label": "Box Position",
         "valueType": "string",
-        "value": "left",
         "options": [
           {
             "name": "Left",
@@ -5851,7 +5848,6 @@
         "name": "boxStyle",
         "label": "Box Style",
         "valueType": "string",
-        "value": "dark-blue",
         "options": [
           {
             "name": "Dark Blue (navy box, white text)",
