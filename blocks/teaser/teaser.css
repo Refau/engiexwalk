@@ -9,6 +9,8 @@
     height: 538px;
     position: relative;
     align-items: center;
+    background: linear-gradient(135deg, #17255f 0%, #005aa0 100%);
+    border-radius: 10px;
 }
 
 .teaser-wrapper .inactive {
