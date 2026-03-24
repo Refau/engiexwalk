@@ -30,10 +30,13 @@ export default function decorate(block) {
   const buttonText = properties.buttontext || 'Button';
   const buttonLink = properties['btn-link'] || '';
 
+  const boxPosition = properties.boxposition || 'center';
+  const boxStyle = properties.boxstyle || 'dark-blue';
+
   const teaser = div({ class: 'teaser-container' },
     createBackgroundImage(properties),
-    div({ class: 'teaser-content-wrapper' },
-      div({ class: 'teaser-title-wrapper' },
+    div({ class: `teaser-content-wrapper teaser-content-wrapper--${boxPosition}` },
+      div({ class: `teaser-box teaser-box--${boxStyle}` },
         h2({ class: 'teaser-title' }),
         div({ class: 'teaser-description' }),
         div({ class: buttonContainerClass },

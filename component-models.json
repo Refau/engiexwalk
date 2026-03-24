@@ -5830,6 +5830,44 @@
         "name": "description",
         "label": "Description",
         "valueType": "string"
+      },
+      {
+        "component": "select",
+        "name": "boxPosition",
+        "label": "Box Position",
+        "valueType": "string",
+        "value": "center",
+        "options": [
+          {
+            "name": "Center",
+            "value": "center"
+          },
+          {
+            "name": "Left",
+            "value": "left"
+          },
+          {
+            "name": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "boxStyle",
+        "label": "Box Style",
+        "valueType": "string",
+        "value": "dark-blue",
+        "options": [
+          {
+            "name": "Dark Blue (navy box, white text)",
+            "value": "dark-blue"
+          },
+          {
+            "name": "White (white box, blue text)",
+            "value": "white"
+          }
+        ]
       }
     ]
   },
