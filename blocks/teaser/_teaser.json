@@ -83,14 +83,6 @@
           "name": "description",
           "label": "Description",
           "valueType": "string"
-        },
-        {
-          "component": "boolean",
-          "label": "Enable Swoosh Effect",
-          "description": "Enable Circular effect on the component",
-          "name": "useSwoosh",
-          "value": "true",
-          "valueType": "boolean"
         }
       ]
     }
