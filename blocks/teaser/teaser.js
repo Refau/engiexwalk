@@ -19,11 +19,11 @@ export default function decorate(block) {
   const rteElement = rteElementTag?.parentElement?.nextElementSibling;
   const rteContent = rteElement?.querySelector('p')?.innerHTML;
 
-  const descElementTag = Array.from(block.querySelectorAll('p'))
+  /*const descElementTag = Array.from(block.querySelectorAll('p'))
     .find((el) => el.textContent.trim() === 'description');
   const descElement = descElementTag?.parentElement?.nextElementSibling;
   const descContent = descElement?.innerHTML;
-
+  */
   const properties = readBlockConfig(block);
 
   const buttonContainerClass = properties.ctastyle ? `cta-${properties.ctastyle}` : 'button-container';
@@ -38,7 +38,7 @@ export default function decorate(block) {
     div({ class: `teaser-content-wrapper teaser-content-wrapper--${boxPosition}` },
       div({ class: `teaser-box teaser-box--${boxStyle}` },
         h2({ class: 'teaser-title' }),
-        div({ class: 'teaser-description' }),
+        //div({ class: 'teaser-description' }),
         div({ class: buttonContainerClass },
           a({ id: 'button', href: buttonLink, class: 'button' },
             span({ class: 'button-text' }, buttonText),
