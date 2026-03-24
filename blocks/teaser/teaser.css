@@ -32,10 +32,8 @@
     border-radius: 10px;
 }
 
-.teaser-wrapper .background-image.inactive ~ .teaser-content-wrapper,
-.teaser-wrapper .teaser-container:has(.background-image.inactive) {
+.teaser-wrapper .teaser-container--no-image {
     background-color: #e8eaed;
-    border-radius: 10px;
 }
 
 /* ── Content wrapper (positions the box) ── */

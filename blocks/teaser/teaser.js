@@ -33,7 +33,8 @@ export default function decorate(block) {
   const boxPosition = properties.boxposition || 'left';
   const boxStyle = properties.boxstyle || 'dark-blue';
 
-  const teaser = div({ class: 'teaser-container' },
+  const noImage = !properties.imageref;
+  const teaser = div({ class: `teaser-container${noImage ? ' teaser-container--no-image' : ''}` },
     createBackgroundImage(properties),
     div({ class: `teaser-content-wrapper teaser-content-wrapper--${boxPosition}` },
       div({ class: `teaser-box teaser-box--${boxStyle}` },
