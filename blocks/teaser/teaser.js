@@ -5,7 +5,7 @@ import { readBlockConfig } from '../../scripts/aem.js';
 
 function createBackgroundImage(properties) {
   const imgSrc = properties.imageref || '';
-  const imgAlt = properties.imagealt || '';
+  const imgAlt = properties.alt || '';
   const imgBackground = div({ class: 'background-image' },
     img({ class: 'teaser-background', src: imgSrc, alt: imgAlt }),
   );

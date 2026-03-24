@@ -24,7 +24,6 @@
         {
           "component": "text",
           "valueType": "string",
-          "value": "Your text will show here.",
           "name": "title",
           "label": "Title"
         },
@@ -39,7 +38,6 @@
           "component": "text",
           "valueType": "string",
           "name": "alt",
-          "value": "",
           "label": "Alt Text"
         },
         {
