@@ -51,10 +51,6 @@
     box-sizing: border-box;
 }
 
-.teaser-wrapper .teaser-content-wrapper--center {
-    justify-content: center;
-}
-
 .teaser-wrapper .teaser-content-wrapper--left {
     justify-content: flex-start;
 }
@@ -66,7 +62,7 @@
 /* ── Box ── */
 
 .teaser-wrapper .teaser-box {
-    border-radius: 16px;
+    border-radius: 6px;
     padding: 40px 48px;
     max-width: 480px;
     width: 100%;
@@ -121,12 +117,10 @@
 /* ── Typography ── */
 
 .teaser-wrapper .teaser-title {
-    font-family: var(--body-font-family);
-    font-size: var(--font-size-1000);
-    text-transform: uppercase;
-    font-weight: normal;
+    font-size: var(--heading-font-size-m, 1.75rem);
+    font-weight: 600;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .teaser-wrapper .teaser-description {
@@ -164,7 +158,6 @@
         padding-bottom: 32px;
     }
 
-    .teaser-wrapper .teaser-content-wrapper--center,
     .teaser-wrapper .teaser-content-wrapper--left,
     .teaser-wrapper .teaser-content-wrapper--right {
         justify-content: center;

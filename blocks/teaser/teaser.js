@@ -30,7 +30,7 @@ export default function decorate(block) {
   const buttonText = properties.buttontext || 'Button';
   const buttonLink = properties['btn-link'] || '';
 
-  const boxPosition = properties.boxposition || 'center';
+  const boxPosition = properties.boxposition || 'left';
   const boxStyle = properties.boxstyle || 'dark-blue';
 
   const teaser = div({ class: 'teaser-container' },

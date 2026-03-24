@@ -89,9 +89,8 @@
           "name": "boxPosition",
           "label": "Box Position",
           "valueType": "string",
-          "value": "center",
+          "value": "left",
           "options": [
-            { "name": "Center", "value": "center" },
             { "name": "Left", "value": "left" },
             { "name": "Right", "value": "right" }
           ]
