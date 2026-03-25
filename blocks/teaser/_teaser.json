@@ -41,6 +41,12 @@
           "label": "Alt Text"
         },
         {
+          "component": "richtext",
+          "name": "description",
+          "label": "Description",
+          "valueType": "string"
+},
+        {
           "component": "container",
           "label": "Button Properties",
           "name": "buttonProperties",
